@@ -2,11 +2,13 @@
 
 # Control Flow: Loops
 
+In programming, loops offer developers a quick and easy way to do something repeatedly. There are many different kinds of loops, but they all essentially do the same thing: they repeat an action some number of times. In today's class, we will learn about two kinds of loops: for loops and while loops.
+
 ## Prerequisites
 
 - JavaScript Syntax
 - Basic Data Types (Numbers, Booleans, Strings)
-- Operators (arithmetic, logic, and comparison)
+- Operators (Arithmetic, Logic, and Comparison)
 - Arrays and Objects
 
 ## Objectives

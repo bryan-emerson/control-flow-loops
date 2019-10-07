@@ -98,7 +98,7 @@ We can set the value of `i` to `0` and use the array's length in the condition
 to perform some action on every item in the array. That looks like this:
 
 ```js
-let instructors = ["Don", "Hector", "Jimmy", "Zakk", "Eva", "Pearl", "Erin"]
+let instructors = ["Jimmy", "Zakk", "Erin", "John", "Hammad", "Paula"]
 
 for (let i = 0; i < instructors.length; i++) {
   console.log(instructors[i])
@@ -125,8 +125,6 @@ Return to [the previous
 exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
 and work through the prompts in Part 2. These prompts will give you a chance to
 practice iterating over arrays.
-
-## Break (10 min / 2:00)
 
 ### `while` Loops (10 min / 2:10)
 

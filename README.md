@@ -21,7 +21,7 @@ By the end of this, developers should be able to:
 
 ## Loops
 
-### `for` Loops (10 min / 1:10)
+### `for` Loops (10 min / 0:15)
 
 `for` loops are extremely powerful, but there are a couple of parts to them that
 we have to learn before we can see their full power. Let's start with a simple
@@ -84,14 +84,14 @@ for (let i = 1, j = 5; i < 5; i++, j--) {
 }
 ```
 
-#### Practice `for` Loops (15 min / 1:25)
+#### Practice `for` Loops (15 min / 0:30)
 
 Let's spend some time practicing writing loops. Open up [this
 exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
 and work through the prompts. Get as far as you can in the time allotted and feel
 free to come back and review these!
 
-### Iterating over Arrays (10 min / 1:35)
+### Iterating over Arrays (10 min / 0:40)
 
 One of the areas where `for` loops really shine is when working with arrays.
 We can set the value of `i` to `0` and use the array's length in the condition
@@ -119,14 +119,14 @@ For the first iteration of the loop, `i` is set to 0 (`let i = 0`). Since `i` is
 `instructors.length` (in this case, 5). With each iteration, the value of `i`
 will increase by 1, so we'll retrieve the next item in the array!
 
-#### Practice Iterating over Arrays (15 min / 1:50)
+#### Practice Iterating over Arrays (15 min / 0:55)
 
 Return to [the previous
 exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
 and work through the prompts in Part 2. These prompts will give you a chance to
 practice iterating over arrays.
 
-### `while` Loops (10 min / 2:10)
+### `while` Loops (10 min / 1:05)
 
 A `while` loop is like an `if` statement but it will execute the content of its
 block repeatedly until the condition becomes false. (i.e. the `while` loop
@@ -159,14 +159,14 @@ while (passwordGuess !== 'password') {
 alert('Argh! You have escaped! I am so lonely, no one ever wants to stay.')
 ```
 
-#### Practice `while` Loops (15 min / 2:25)
+#### Practice `while` Loops (15 min / 1:20)
 
 Return to [the previous
 exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
 and work through the prompts in part 3.  These prompts will give you the chance
 to practice writing `for` loops.
 
-## Closing (5 min / 2:30)
+## Closing (5 min / 1:25)
 
 You can get really far in programming with the knowledge you have right now:
 data types, arrays, conditionals, and loops! The biggest challenge beginners

@@ -34,17 +34,17 @@ for (let i = 0; i < 5; i++) {
 ```
 
 The first thing to notice here is the overall structure. We need the `for`
-keyword, followed by the parenthesis and everything inside of them (`(let i = 0;
-i < 10; i++)`), and then the block of code (inside the `{}` braces).
+keyword, followed by the parentheses and everything inside of them (`(let i = 0;
+i < 10; i++)`), and then the block of code you want to repeatedly run (inside the `{}` braces).
 
 Let's break down what's happening between the parenthesis (`()`), because there
 are three parts to this expression:
 
 1. `let i = 0` sets up an iteratee, a variable that we will iterate (increase or
-   decrease by some number) with each iteration of the loop.
+   decrease by some number) with each iteration of the loop. Consider this the starting point of your loop.
 2. `i < 5` is the comparison expression - it's actually a conditional! The loop
    will continue to execute until this expression evaluates to false.
-3. `i++` controls how the iteratee should change after each iteration.
+3. `i++` controls how the iteratee should change after each iteration. In this case, `++` increases the iteratee's value by `1`.
 
 These three pieces of the `for` loop are what make them powerful - we can alter
 these to iterate in hundreds of different ways. Before we get to that, let's

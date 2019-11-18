@@ -49,7 +49,7 @@ are three parts to this expression:
    starting point of your loop.
 
    It is important to use a variable keyword, and
-   [`let` is the best choicee](https://wesbos.com/for-of-es6/)
+   [`let` is the best choice](https://wesbos.com/for-of-es6/)
 
 2. `i < 5` is the comparison expression - it's actually a conditional! The loop
    will continue to execute until this expression evaluates to false.

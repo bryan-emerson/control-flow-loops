@@ -2,7 +2,10 @@
 
 # Control Flow: Loops
 
-In programming, loops offer developers a quick and easy way to do something repeatedly. There are many different kinds of loops, but they all essentially do the same thing: they repeat an action some number of times. In today's class, we will learn about two kinds of loops: for loops and while loops.
+In programming, loops offer developers a quick and easy way to do something
+repeatedly. There are many different kinds of loops, but they all essentially do
+the same thing: they repeat an action some number of times. In today's class, we
+will learn about two kinds of loops: for loops and while loops.
 
 ## Prerequisites
 
@@ -29,22 +32,25 @@ example:
 
 ```js
 for (let i = 0; i < 5; i++) {
-  console.log(i)
+  console.log(i);
 }
 ```
 
 The first thing to notice here is the overall structure. We need the `for`
-keyword, followed by the parentheses and everything inside of them (`(let i = 0;
-i < 10; i++)`), and then the block of code you want to repeatedly run (inside the `{}` braces).
+keyword, followed by the parentheses and everything inside of them
+(`(let i = 0; i < 10; i++)`), and then the block of code you want to repeatedly
+run (inside the `{}` braces).
 
 Let's break down what's happening between the parenthesis (`()`), because there
 are three parts to this expression:
 
 1. `let i = 0` sets up an iteratee, a variable that we will iterate (increase or
-   decrease by some number) with each iteration of the loop. Consider this the starting point of your loop.
+   decrease by some number) with each iteration of the loop. Consider this the
+   starting point of your loop.
 2. `i < 5` is the comparison expression - it's actually a conditional! The loop
    will continue to execute until this expression evaluates to false.
-3. `i++` controls how the iteratee should change after each iteration. In this case, `++` increases the iteratee's value by `1`.
+3. `i++` controls how the iteratee should change after each iteration. In this
+   case, `++` increases the iteratee's value by `1`.
 
 These three pieces of the `for` loop are what make them powerful - we can alter
 these to iterate in hundreds of different ways. Before we get to that, let's
@@ -53,8 +59,8 @@ walk through how this loop works, as if we were the JavaScript interpreter:
 1. We arrive at the for loop. Create a variable, `i`, and set it equal to 0.
 2. Check our condition (`i < 5`). Is it true? Is `i` less than 5? Yes!
 3. Run the block of code - in this case, print the value of `i` to the console.
-3. Increment the value of `i`. In this case, increase it by 1.
-4. Return to step 2 and repeat until our condition is no longer true.
+4. Increment the value of `i`. In this case, increase it by 1.
+5. Return to step 2 and repeat until our condition is no longer true.
 
 We have a lot of flexibility in how we iterate our loop just based on the three
 expressions inside our `for` loop. We can count up or down by changing the third
@@ -80,49 +86,59 @@ for (let i = 100; i >= 0; i--) {
 
 ```js
 for (let i = 1, j = 5; i < 5; i++, j--) {
-  console.log(i, j)
+  console.log(i, j);
+}
+```
+
+**Nested loops:**
+
+```js
+for (let i = 1; i < 5; i++) {
+  for (let j = 1; j < 5; j++) {
+    console.log(i, j);
+  }
 }
 ```
 
 #### Practice `for` Loops (15 min / 0:30)
 
-Let's spend some time practicing writing loops. Open up [this
-exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
-and work through the prompts. Get as far as you can in the time allotted and feel
-free to come back and review these!
+Let's spend some time practicing writing loops. Open up
+[this exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
+and work through the prompts. Get as far as you can in the time allotted and
+feel free to come back and review these!
 
 ### Iterating over Arrays (10 min / 0:40)
 
-One of the areas where `for` loops really shine is when working with arrays.
-We can set the value of `i` to `0` and use the array's length in the condition
-to perform some action on every item in the array. That looks like this:
+One of the areas where `for` loops really shine is when working with arrays. We
+can set the value of `i` to `0` and use the array's length in the condition to
+perform some action on every item in the array. That looks like this:
 
 ```js
-let instructors = ["Jimmy", "Zakk", "Erin", "John", "Hammad", "Paula"]
+let instructors = ["Jimmy", "Zakk", "Erin", "John", "Hammad", "Paula"];
 
 for (let i = 0; i < instructors.length; i++) {
-  console.log(instructors[i])
+  console.log(instructors[i]);
 }
 ```
 
 Let's unpack what's happening here:
 
-* We're setting our incrementer to be 0 and our condition is set up to continue
-    looping while i is less than the length of the array (`i
-    < instructors.length`)
-* Inside our loop, we're using `i` to retrieve values from the array by their
-    index.
+- We're setting our incrementer to be 0 and our condition is set up to continue
+  looping while i is less than the length of the array
+  (`i < instructors.length`)
+- Inside our loop, we're using `i` to retrieve values from the array by their
+  index.
 
 For the first iteration of the loop, `i` is set to 0 (`let i = 0`). Since `i` is
-0, we can use it to retrieve the first item in the array, at an index of
-0 (`instructors[i]`). That will continue while `i` is less than
+0, we can use it to retrieve the first item in the array, at an index of 0
+(`instructors[i]`). That will continue while `i` is less than
 `instructors.length` (in this case, 5). With each iteration, the value of `i`
 will increase by 1, so we'll retrieve the next item in the array!
 
 #### Practice Iterating over Arrays (15 min / 0:55)
 
-Return to [the previous
-exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
+Return to
+[the previous exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
 and work through the prompts in Part 2. These prompts will give you a chance to
 practice iterating over arrays.
 
@@ -130,13 +146,13 @@ practice iterating over arrays.
 
 A `while` loop is like an `if` statement but it will execute the content of its
 block repeatedly until the condition becomes false. (i.e. the `while` loop
-continues *while* the condition is true).
+continues _while_ the condition is true).
 
 ```js
-num = 0
+num = 0;
 while (num <= 10) {
-  console.log(num)
-  num += 1 // short-hand for num = num + 1
+  console.log(num);
+  num += 1; // short-hand for num = num + 1
 }
 ```
 
@@ -146,24 +162,26 @@ manually**. In a `for` loop, the conditions to break the loop are all
 encapsulated in the definition of the loops. In a `while` loop, that logic has
 to be inside the code block. This makes `while` loops powerful, a lot of games
 are built with `while` loops, for instance; but it also means you have to be
-careful as you can run into an *infinite loop*.
+careful as you can run into an _infinite loop_.
 
 Because of this, they're perfect for cases when you need a block of code to run
 (loop) an unknown number of times:
 
 ```js
-let passwordGuess = ''
-while (passwordGuess !== 'password') {
-  passwordGuess = prompt('You have been imprisoned in the code-block of a while loop! What is the magic word to exit?')
+let passwordGuess = "";
+while (passwordGuess !== "password") {
+  passwordGuess = prompt(
+    "You have been imprisoned in the code-block of a while loop! What is the magic word to exit?"
+  );
 }
-alert('Argh! You have escaped! I am so lonely, no one ever wants to stay.')
+alert("Argh! You have escaped! I am so lonely, no one ever wants to stay.");
 ```
 
 #### Practice `while` Loops (15 min / 1:20)
 
-Return to [the previous
-exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
-and work through the prompts in part 3.  These prompts will give you the chance
+Return to
+[the previous exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
+and work through the prompts in part 3. These prompts will give you the chance
 to practice writing `for` loops.
 
 ## Closing (5 min / 1:25)
@@ -171,14 +189,13 @@ to practice writing `for` loops.
 You can get really far in programming with the knowledge you have right now:
 data types, arrays, conditionals, and loops! The biggest challenge beginners
 have with control flow is expressing their thinking in code and combining the
-patterns together (like putting a `for` loop in a `while` loop or
-a `conditional` in a `for` loop, etc), but don't worry - you'll get lots of
+patterns together (like putting a `for` loop in a `while` loop or a
+`conditional` in a `for` loop, etc), but don't worry - you'll get lots of
 practice!
 
 ## Additional Resources
 
-Look at Codewars challenges
-on
+Look at Codewars challenges on
 [loops](https://www.codewars.com/kata/search/javascript?beta=false&q=&r=-8&r=-7&tags=Loops)
 
 ## [License](LICENSE)

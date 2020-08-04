@@ -23,16 +23,61 @@ By the end of this, developers should be able to:
 - Identify problem types and match to the appropriate control flow statements
 
 ## Loops
+### `while` Loops (10 min / 1:05)
+
+A `while` loop is like an `if` statement but it will execute the content of its
+block repeatedly until the condition becomes false. (i.e. the `while` loop
+continues _while_ the condition is true).
+
+```js
+num = 0;
+while (num <= 10) {
+  console.log(num);
+  num += 1; // short-hand for num = num + 1
+}
+```
+
+There's a potential gotcha with working with `while` loops: because the loop
+continues for as long as the condition is true, you **have to break the loop
+manually**. In a `for` loop, the conditions to break the loop are all
+encapsulated in the definition of the loops. In a `while` loop, that logic has
+to be inside the code block. This makes `while` loops very useful in some cases (a lot of games
+are built with `while` loops) but it also means you have to be
+careful as you can run into an _infinite loop_.
+
+A `while` loop is perfect for when you need a block of code to repeat an unknown number of times:
+
+```js
+let passwordGuess = "";
+while (passwordGuess !== "password") {
+  passwordGuess = prompt(
+    "You have been imprisoned in the code-block of a while loop! What is the magic word to exit?"
+  );
+}
+alert("Argh! You have escaped! I am so lonely, no one ever wants to stay.");
+```
+
+#### Practice `while` Loops (15 min / 1:20)
+Work through the prompts in Part 1 in [this exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice). 
+Get as far as you can in the time allotted and feel free to come back and review these!
 
 ### `for` Loops (10 min / 0:15)
 
-`for` loops are extremely powerful, but there are a couple of parts to them that
-we have to learn before we can see their full power. Let's start with a simple
-example:
-
+Often looping is done for a set amount of times. For example, to loop five times with a `while` loop:
 ```js
-for (let i = 0; i < 5; i++) {
-  console.log(i);
+let i=0;
+while (i<5) {
+  console.log(i)
+  i++
+ }
+```
+
+This pattern is so common that most langauges have a more specialized loop called the `for` loop. 
+The syntax is more succinct but can be complicated at first.
+Here's the previous example written as a `for` loop:
+```js
+for (let i=0; i<5; i++) {
+  console.log(i)
 }
 ```
 
@@ -106,10 +151,8 @@ for (let i = 1; i < 5; i++) {
 
 #### Practice `for` Loops (15 min / 0:30)
 
-Let's spend some time practicing writing loops. Open up
-[this exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
-and work the prompts in part 1. Get as far as you can in the time allotted and
-feel free to come back and review these!
+Open up [this exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
+and work the prompts in Part 2. 
 
 ### Iterating over Arrays (10 min / 0:40)
 
@@ -118,9 +161,9 @@ can set the value of `i` to `0` and use the array's length in the condition to
 perform some action on every item in the array. That looks like this:
 
 ```js
-let instructors = ["Jimmy", "Zakk", "Erin", "Roger", "Noah", "Paula"];
+let instructors = ["Tosin", "Tyler", "Zakk", "Murray", "Brock", "Paula"];
 
-for (let i = 0; i < instructors.length; i++) {
+for (let i=0; i<instructors.length; i++) {
   console.log(instructors[i]);
 }
 ```
@@ -141,52 +184,7 @@ will increase by 1, so we'll retrieve the next item in the array!
 
 #### Practice Iterating over Arrays (15 min / 0:55)
 
-Return to
-[the previous exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
-and work through the prompts in Part 2. These prompts will give you a chance to
-practice iterating over arrays.
-
-### `while` Loops (10 min / 1:05)
-
-A `while` loop is like an `if` statement but it will execute the content of its
-block repeatedly until the condition becomes false. (i.e. the `while` loop
-continues _while_ the condition is true).
-
-```js
-num = 0;
-while (num <= 10) {
-  console.log(num);
-  num += 1; // short-hand for num = num + 1
-}
-```
-
-There's a potential gotcha with working with `while` loops: because the loop
-continues for as long as the condition is true, you **have to break the loop
-manually**. In a `for` loop, the conditions to break the loop are all
-encapsulated in the definition of the loops. In a `while` loop, that logic has
-to be inside the code block. This makes `while` loops powerful, a lot of games
-are built with `while` loops, for instance; but it also means you have to be
-careful as you can run into an _infinite loop_.
-
-Because of this, they're perfect for cases when you need a block of code to run
-(loop) an unknown number of times:
-
-```js
-let passwordGuess = "";
-while (passwordGuess !== "password") {
-  passwordGuess = prompt(
-    "You have been imprisoned in the code-block of a while loop! What is the magic word to exit?"
-  );
-}
-alert("Argh! You have escaped! I am so lonely, no one ever wants to stay.");
-```
-
-#### Practice `while` Loops (15 min / 1:20)
-
-Return to
-[the previous exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice)
-and work through the prompts in part 3. These prompts will give you the chance
-to practice writing `for` loops.
+Return to [the previous exercise](https://git.generalassemb.ly/dc-wdi-fundamentals/js-loops-practice) and work through the prompts in Part 3. 
 
 ## Closing (5 min / 1:25)
 
